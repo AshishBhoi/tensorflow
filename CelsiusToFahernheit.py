@@ -15,7 +15,7 @@ l1 = tf.keras.layers.Dense(units=4)
 l2 = tf.keras.layers.Dense(units=1)
 model = tf.keras.Sequential([l0, l1, l2])
 model.compile(loss='mean_squared_error', optimizer=tf.keras.optimizers.Adam(0.01))
-history = model.fit(celsius_q, fahrenheit_a, epochs=10000, verbose=True)
+history = model.fit(celsius_q, fahrenheit_a, epochs=10000, verbose=False)
 print("Finished treaning the model")
 
 plt.xlabel('Epochs Number')
