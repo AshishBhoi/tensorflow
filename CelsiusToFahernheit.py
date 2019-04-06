@@ -10,8 +10,10 @@ fahrenheit_a = np.array([-58, -40, -22, -4, 14, 15.8, 17.6, 19.4, 21.2, 23, 24.8
 for i,c in enumerate(celsius_q):
     print("{} degrees Celsius = {} degrees Fahrenhet".format(c, fahrenheit_a[i]))
 
-l0 = tf.keras.layers.Dense(units=1, input_shape=[1])
-model = tf.keras.Sequential([l0])
+l0 = tf.keras.layers.Dense(units=4, input_shape=[1])
+l1 = tf.keras.layers.Dense(units=4)
+l2 = tf.keras.layers.Dense(units=1)
+model = tf.keras.Sequential([l0, l1, l2])
 model.compile(loss='mean_squared_error', optimizer=tf.keras.optimizers.Adam(0.01))
 history = model.fit(celsius_q, fahrenheit_a, epochs=10000, verbose=True)
 print("Finished treaning the model")
@@ -22,3 +24,6 @@ plt.plot(history.history['loss'])
 
 print(model.predict([100.0]))
 print(model.predict([300.0]))
+print("These are the layer variables: {}".format(l0.get_weights()))
+print("These are the layer variables: {}".format(l1.get_weights()))
+print("These are the layer variables: {}".format(l2.get_weights()))
