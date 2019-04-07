@@ -5,6 +5,7 @@ install:
   - pip install tensorflow
   - pip install numpy
   - pip install matplotlib
+  - pip install tensorflow_datasets
 script:
   - python CelsiusToFahernheit.py
   - python fashionMnistDataset.py
