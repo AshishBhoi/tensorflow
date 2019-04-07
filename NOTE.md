@@ -15,3 +15,7 @@
 - Epoch: A full pass over the entire training dataset
 - Forward pass: The computation of output values from input
 - Backward pass (backpropagation): The calculation of internal variable adjustments according to the optimizer algorithm, starting from the output layer and working back through each layer to the input.
+- Flattening: The process of converting a 2d image into 1d vector
+- ReLU: An activation function that allows a model to solve nonlinear problems
+- Softmax: A function that provides probabilities for each possible output class
+- Classification: A machine learning model used for distinguishing among two or more output categories
